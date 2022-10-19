@@ -6,7 +6,7 @@ const btnStop = document.querySelector(".btnStop");
 const btnLetsGo = document.querySelector(".btnLetsGo");
 const nameactiv = document.querySelector(".nameActiv");
 const activDisplay = document.querySelector(".activType");
-const activDInput = document.querySelector(".input");
+const activInput = document.querySelector(".input");
 
 let h = 0;
 let m = 0;
@@ -32,18 +32,19 @@ const timer = setInterval(() => {
 
 btnStart.addEventListener("click", function () {
   timeOn = true;
+  activDisplay.innerHTML = activInput.value;
 });
 
 btnStop.addEventListener("click", function () {
   timeOn = false;
+  activDisplay.innerHTML += ` - Total time spent =  ${cDisp.innerHTML}`;
+  cDisp.innerHTML = "";
 });
 
-function dispVal() {}
-
 btnLetsGo.addEventListener("click", function () {
-  activDisplay.innerHTML = activDInput.value;
+  activDisplay.innerHTML = activInput.value;
   nameactiv.style.visibility = "hidden";
-  activDInput.style.visibility = "hidden";
+  activInput.style.visibility = "hidden";
   btnLetsGo.style.visibility = "hidden";
   btnStart.style.visibility = "visible";
   btnStop.style.visibility = "visible";
