@@ -17,6 +17,24 @@
         top: 120px;
         color: rgb(168, 93, 8);
       }
+      .nameActiv{
+        font-size: 40px;
+        color: rgb(128, 29, 86);
+      }
+      .activType{
+        font-size: 40px;
+        color: rgb(128, 29, 86);
+      }
+
+      .input{
+        position: relative;
+        background-color: rgb(245, 245, 208);
+        color:rgb(128, 29, 86);
+        font-size: large;
+        height: 20px;
+        left: 380px;
+        top: -60px;
+      }
 
       .btnStart {
         width: 100px;
@@ -26,6 +44,7 @@
         left: 420px;
         top: 450px;
         border-radius: 190px/160px;
+        visibility: hidden;
       }
 
       .btnStop {
@@ -37,16 +56,33 @@
         left: 420px;
         border-radius: 190px/160px;
         border-color: rgb(30, 80, 30);
+        visibility: hidden;
+      }
+
+      .btnLetsGo {
+        width: 100px;
+        height: 80px;
+        position: absolute;
+        background: rgb(77, 36, 104);
+        top: 250px;
+        left: 420px;
+        border-radius: 70px/30px;
+        border-color: rgb(30, 80, 30);
+        font-size: x-large;
+        color: rgb(32, 88, 44);
+        visibility: visible;
       }
     </style>
     <header class="titleHead">Activity timer track</header>
   </head>
   <body style="background-color: rgb(245, 245, 208)">
-    <header class="clockheader">
-      <h1 class="123"></h1>
-    </header>
+    <header class="clockheader"></header>
+    <h1 class="nameActiv">Name your activity:</h1>
+    <h2 class ="activType"></h2>
+    <input class="input"></input>
     <button class="btnStart">Start</button>
     <button class="btnStop">Stop</button>
+    <button class="btnLetsGo">Lets Go!</button>
     <script src="Att.js"></script>
   </body>
 </html>
