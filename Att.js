@@ -12,6 +12,13 @@ let h = 0;
 let m = 0;
 let s = 0;
 let timeOn = false;
+//const btnActive = function () {
+//if ((btnStart.style.visibility = "visible")) {
+//btnStop.style.visibility = "hidden";
+// } else {
+//   btnStop.style.visibility = "visible";
+// }
+//};
 
 const timer = setInterval(() => {
   if (timeOn === true) {
@@ -33,19 +40,28 @@ const timer = setInterval(() => {
 btnStart.addEventListener("click", function () {
   timeOn = true;
   activDisplay.innerHTML = activInput.value;
+  btnStop.style.visibility = "visible";
+  btnStart.style.visibility = "hidden";
 });
 
 btnStop.addEventListener("click", function () {
   timeOn = false;
-  activDisplay.innerHTML += ` - Total time spent =  ${cDisp.innerHTML}`;
+
+  if (cDisp.innerHTML !== "") {
+    activDisplay.innerHTML += ` - Total time spent =  ${cDisp.innerHTML}`;
+  }
+
   cDisp.innerHTML = "";
+  btnStop.style.visibility = "hidden";
+  btnStart.style.visibility = "visible";
 });
 
 btnLetsGo.addEventListener("click", function () {
-  activDisplay.innerHTML = activInput.value;
-  nameactiv.style.visibility = "hidden";
-  activInput.style.visibility = "hidden";
-  btnLetsGo.style.visibility = "hidden";
-  btnStart.style.visibility = "visible";
-  btnStop.style.visibility = "visible";
+  if (activInput.value !== "") {
+    activDisplay.innerHTML = activInput.value;
+    nameactiv.style.visibility = "hidden";
+    activInput.style.visibility = "hidden";
+    btnLetsGo.style.visibility = "hidden";
+    btnStart.style.visibility = "visible";
+  }
 });
