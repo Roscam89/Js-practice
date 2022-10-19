@@ -45,6 +45,12 @@
         top: 450px;
         border-radius: 190px/160px;
         visibility: hidden;
+        cursor: pointer;
+      }
+      .btnStart:hover{
+        transform: scale(1.1);
+        box-shadow: 0 8px 10px green;
+        font-size: larger;
       }
 
       .btnStop {
@@ -57,21 +63,38 @@
         border-radius: 190px/160px;
         border-color: rgb(30, 80, 30);
         visibility: hidden;
+        cursor: pointer;
+      }
+      .btnStop:hover{
+        transform: scale(1.10);
+        box-shadow: 0 8px 10px red;
+        font-size: larger;
       }
 
       .btnLetsGo {
         width: 100px;
         height: 80px;
         position: absolute;
-        background: rgb(77, 36, 104);
+        background: rgb(119, 94, 136);
         top: 250px;
         left: 420px;
         border-radius: 70px/30px;
         border-color: rgb(30, 80, 30);
         font-size: x-large;
-        color: rgb(32, 88, 44);
+        color: rgb(1, 15, 4);
         visibility: visible;
+        transition-duration: 0.1s;
+        cursor: pointer;
       }
+      .btnLetsGo:hover{
+        transform: scale(1.15);
+        box-shadow: 0 16px 14px black;
+        
+        
+      }
+      
+
+
     </style>
     <header class="titleHead">Activity timer track</header>
   </head>
