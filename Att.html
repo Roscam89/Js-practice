@@ -2,25 +2,48 @@
 <html lang="en">
   <head>
     <style>
+      .titleHead {
+        font-size: 100px;
+        position: relative;
+        text-align: center;
+        color: rgb(128, 29, 86);
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      .clockheader {
+        font-size: 60px;
+        position: relative;
+        text-align: center;
+        top: 120px;
+        color: rgb(168, 93, 8);
+      }
+
       .btnStart {
         width: 100px;
-        position: relative;
-        background: palegoldenrod;
+        height: 80px;
+        background: rgb(20, 119, 50);
+        position: absolute;
+        left: 420px;
+        top: 450px;
+        border-radius: 190px/160px;
       }
 
       .btnStop {
         width: 100px;
-        position: relative;
-        background: palegoldenrod;
+        height: 80px;
+        position: absolute;
+        background: rgb(238, 34, 7);
+        top: 550px;
+        left: 420px;
+        border-radius: 190px/160px;
+        border-color: rgb(30, 80, 30);
       }
     </style>
-    <header style="font-size: 60px; padding: 60px; text-align: center">
-      Activity timer track
-    </header>
+    <header class="titleHead">Activity timer track</header>
   </head>
-  <body style="background-color: powderblue">
-    <header class="clockheader" ; style="font-size: 50px" ;>
-    <h1 class="123"> </h1>
+  <body style="background-color: rgb(245, 245, 208)">
+    <header class="clockheader">
+      <h1 class="123"></h1>
     </header>
     <button class="btnStart">Start</button>
     <button class="btnStop">Stop</button>
