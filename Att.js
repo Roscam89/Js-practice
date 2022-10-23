@@ -65,3 +65,5 @@ btnLetsGo.addEventListener("click", function () {
     btnStart.style.visibility = "visible";
   }
 });
+
+//Database code
